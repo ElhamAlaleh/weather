@@ -44,18 +44,25 @@ input {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 2em;
 }
 
 .city-input {
   border: none;
+  border-radius: 3px;
   padding: 10px;
   font-size: 16px;
   text-align: center;
 }
 
+.city-input:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 2px rgba(30, 41, 141, 0.2);
+}
+
 .get-weather-btn {
   margin: 1em;
-  padding: 0.5em;
+  padding: 12px 0.5em;
   background-color: rgb(0, 0, 189);
   color: white;
   border: none; 
@@ -64,6 +71,7 @@ input {
   font-size: 1rem;
   text-align: center;
   text-wrap: nowrap;
+  min-width: fit-content;
 }
 
 .get-weather-btn:hover {
@@ -71,6 +79,19 @@ input {
   background-color: white;
   border: 1px solid rgb(0, 0, 189);
   transition: 0.2s;
+}
+
+.error {
+  color: firebrick;
+  font-weight: 600;
+  text-align: center;
+}
+
+.city-name {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+  text-transform: capitalize;
+  font-weight: 700;
 }
 
 .forcast-icon {
@@ -83,7 +104,7 @@ input {
   margin-bottom: 0.5em;
 }
 
-.description {
+.description, .loading-message {
   margin-bottom: 1.5em;
   font-weight: 100;
 }
